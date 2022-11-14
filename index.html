@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="stylesheet" href="style/main.css">
+    <link type="text/css" rel="stylesheet" href="style/fluig-style-guide.min.css">
+    <script type="text/javascript" src="jquery/jquery.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery/mustache-min.js"></script>
+    <script type="text/javascript" src="jquery/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+    
+    <title>Cadastro De Cliente</title>
+</head>
+<body>
+
+    <div class="fluig-style-guide">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1 class="fs-no-margin fs-ellipsis fs-full-width">Cadastro Cliente / Produto</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-lg active ">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                solicitante
+            -->
+            <div class="row">
+                <form class="form-inline" role="form">
+                    <div class="row">
+                        <h3>A Solicitante</h3>
+                        <div class="col-md-4">
+                            <h4>Data Solicitação</h4>
+                            <input type="datetime-local" class="form-control" name="Data Solicite" id="">
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Nome</h4>
+                            <input type="text" class="form-control" name="nome" id=""> 
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Área</h4>
+                            <input type="text" class="form-control" name="Área" id="">
+                        </div>
+                    </div>
+             </form>
+            </div>
+            <!--
+                Formulario solicitação
+            -->
+            
+            <div class="row">
+                <form class="form-inline" role="form">
+                    <div class="row">
+                        <div class="panel panel-info  col-md-12 ">
+                            <h2>Solicitação</h2>
+                        </div>
+                    </div>
+                    <h3>Dados Do Fornecedor</h3>
+                    <div class="row">
+                        <div class="form-group col-md-8" id="">
+                            <h4>Razão Social:</h4>
+                            <input type="text" class="form-control" name="razaoSocial" id=""> 
+                        </div>
+                        <div class="form-group col-md-4" id="">
+                            <h4>CNPJ:</h4>
+                            <input type="text" class="form-control" name="cnpj" id=""> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <h4>Nome Fantasia:</h4>
+                            <input type="text" class="form-control" name="nomeFantasia" id=""> 
+                        </div>
+                        <div class="form-group col-md-4" >
+                            <h4>Inscrição Estadual:</h4>
+                            <input type="text" class="form-control" name="inscricaoEstadual" id=""> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h4>CEP: </h4>
+                            <input type="text" class="form-control" name="cep" id=""> 
+                        </div>
+                        <div class="form-group col-md-4 col-md-offset-4">
+                            <h4>Inscrição Municipal:</h4>
+                            <input type="text" class="form-control" name="inscricaoMunicipal"id=""> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h4>Endereço:</h4>
+                            <input type="text" class="form-control" name="endereco" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Complemento:</h4>
+                            <input type="text" class="form-control" name="complemento" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Número:</h4>
+                            <input type="text" class="form-control" name="numero" id=""> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h4>Bairro:</h4>
+                            <input type="text" class="form-control" name="bairro" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Estado:</h4>
+                            <input type="text" class="form-control" name="estado" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Municipio:</h4>
+                            <input type="text" class="form-control" name="municipio" id=""> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h4>Nome Da Pessoa De Contato:</h4>
+                            <input type="text" class="form-control" name="nomeDaPessoaDeContato" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Estado:</h4>
+                            <input type="text" class="form-control" name="estado" id=""> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h4>Municipio:</h4>
+                            <input type="text" class="form-control" name="municipio" id=""> 
+                        </div>
+                    </div>
+                </form>
+                <!--
+                    Produtos
+                -->
+                <form class="form-inline" role="form">
+                    <h3>Produto</h3>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-10">
+                            <button type="button" class="btn btn-success">Incluir Item</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <i class="flaticon flaticon-trash icon-xl" aria-hidden="true"></i>
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+       
